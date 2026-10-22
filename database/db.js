@@ -20,6 +20,11 @@ db.exec(`
         guild_id TEXT PRIMARY KEY,
         channel_id TEXT NOT NULL
     );
+    
+    CREATE TABLE IF NOT EXISTS welcome_banners (
+        guild_id TEXT PRIMARY KEY,
+        image_url TEXT NOT NULL
+    );
 `);
 
 module.exports = db;
